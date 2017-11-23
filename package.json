@@ -1,0 +1,9 @@
+{
+  "name": "react-translated",
+  "version": "0.0.1",
+  "description": "A simple translation component for React",
+  "main": "index.js",
+  "repository": "https://github.com/amsul/react-translated",
+  "author": "Amsul <reach@amsul.ca>",
+  "license": "MIT"
+}
