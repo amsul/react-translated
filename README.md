@@ -1,6 +1,6 @@
 # react-translated
 
-A dead simple way to add complex translations in a React project 🌎
+A dead simple way to add complex translations in a React project 🌎🌍🌏
 
 #### Features
 
@@ -8,6 +8,7 @@ A dead simple way to add complex translations in a React project 🌎
 * Component interpolation
 * Markdown inline-manipulations (bold text only right now)
 * Custom manipulations, pluralizations, and grammar rules based on input-data
+* Component-level translation files (enables loading only required translations)
 
 #### Example
 
@@ -29,7 +30,7 @@ To render this:
 
 #### Support
 
-Currently just React Native, with plans to add support for React DOM.
+React DOM and React Native 🔥
 
 <br />
 
@@ -276,7 +277,7 @@ Renders as:
 
 ![](docs/tap_the_star.png)
 
-Another practical application of this is to translate text that requires data that also needs to be translated:
+Another practical application of this is nested translations - text that requires data that also needs to be translated:
 
 ```jsx
 // translation.js
