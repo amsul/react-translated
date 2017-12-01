@@ -15,7 +15,8 @@ Write this:
 
 ```jsx
 <Translate
-  text='Simple *translations* in React <ReactLogo>'
+  text='{difficulty} *translations* in React <ReactLogo>'
+  data={{ difficulty: 'Simple' }}
   renderMap={{
     renderReactLogo: () => <ReactLogo size={14} />,
   }}
