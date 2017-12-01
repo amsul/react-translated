@@ -94,6 +94,23 @@ Continue reading below to see how to handle the various translation scenarios.
 
 ## Use
 
+The library can be imported in whatever way you find suitable:
+
+```js
+import ReactTranslated from 'react-translated'
+import * as ReactTranslated from 'react-translated'
+
+<ReactTranslated.Translate /*...*/ />
+```
+
+Or:
+
+```js
+import { tag, Provider, Translate } from 'react-translated'
+
+<Translate /*...*/ />
+```
+
 ### Static text
 
 This is pretty self-explanatory:
