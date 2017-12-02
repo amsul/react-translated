@@ -2,10 +2,33 @@
   "name": "react-translated",
   "version": "1.1.0",
   "description": "A dead simple way to add complex translations in a React project 🌎",
-  "main": "lib/index.js",
   "repository": "https://github.com/amsul/react-translated",
   "author": "Amsul <reach@amsul.ca>",
   "license": "MIT",
+  "scripts": {
+    "build": "rm -rf dist/ && yarn build:native && yarn build:dom && yarn build:examples",
+    "build:native": "cp -a lib/. dist/ && mv dist/index.js dist/react-translated.native.js",
+    "build:dom": "rollup -c",
+    "build:examples": "yarn build:examples:native && yarn build:examples:dom",
+    "build:examples:native": "cp -a dist/. examples/react-native/dist/",
+    "build:examples:dom": "cp -a dist/. examples/react-dom/src/dist/",
+    "release": "yarn build && yarn publish"
+  },
+  "files": [
+    "dist/**"
+  ],
+  "main": "dist/react-translated.umd.js",
+  "module": "dist/react-translated.js",
+  "jsnext:main": "dist/react-translated.js",
+  "keywords": [
+    "react",
+    "react-dom",
+    "react-native",
+    "translate",
+    "translation",
+    "internationalization",
+    "i18n"
+  ],
   "dependencies": {
     "prop-types": "^15.6.0",
     "react": "^16.0.0",
@@ -15,11 +38,19 @@
   "devDependencies": {
     "babel-eslint": "^8.0.2",
     "babel-jest": "^21.2.0",
-    "babel-preset-react-native": "^4.0.0",
+    "babel-plugin-external-helpers": "^6.22.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-es2015-rollup": "^3.0.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
     "eslint": "^4.12.1",
     "eslint-plugin-flowtype": "^2.39.1",
     "eslint-plugin-react": "^7.5.1",
-    "flow-typed": "^2.2.3"
+    "flow-typed": "^2.2.3",
+    "rollup": "^0.52.0",
+    "rollup-plugin-babel": "^3.0.2",
+    "rollup-plugin-flow": "^1.1.1",
+    "rollup-plugin-node-resolve": "^3.0.0"
   },
   "peerDependencies": {
     "react": ">=16.0.0",
