@@ -12,6 +12,7 @@
     "build:examples": "yarn build:examples:native && yarn build:examples:dom",
     "build:examples:native": "cp -a dist/. examples/react-native/dist/",
     "build:examples:dom": "cp -a dist/. examples/react-dom/src/dist/",
+    "develop": "watch 'yarn build' lib/.",
     "release": "yarn build && yarn publish"
   },
   "files": [
@@ -50,7 +51,8 @@
     "rollup": "^0.52.0",
     "rollup-plugin-babel": "^3.0.2",
     "rollup-plugin-flow": "^1.1.1",
-    "rollup-plugin-node-resolve": "^3.0.0"
+    "rollup-plugin-node-resolve": "^3.0.0",
+    "watch": "^1.0.2"
   },
   "peerDependencies": {
     "react": ">=16.0.0",
