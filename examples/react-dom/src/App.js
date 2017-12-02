@@ -21,16 +21,44 @@ const ReactLogo = ({ size }: { size: number }) => (
     />
 )
 
-class App extends Component {
+class PreventingUpdates extends Component {
   render() {
     return (
-      <ReactTranslated.Provider language='en' translation={translation}>
+      <Text style={styles.instructions}>
+        <ReactTranslated.Translate text='Hi World!' />
+      </Text>
+    )
+  }
+  shouldComponentUpdate(nextProps, nextState) {
+    return false;
+  }
+}
+
+class App extends Component {
+  state = {
+    language: "en"
+  }
+  onClickSwitchLanguage() {
+    const language = {
+      en: "fr",
+      fr: "en",
+    }[this.state.language]
+    this.setState({ language })
+  }
+  render() {
+    const { language } = this.state
+    return (
+      <ReactTranslated.Provider language={language} translation={translation}>
         <div className="App">
           <header className="App-header">
             <img src={logo} className="App-logo" alt="logo" />
             <h1 className="App-title">Welcome to React</h1>
           </header>
           <br /><br />
+          <h3>Language: {language}</h3>
+          <button onClick={() => this.onClickSwitchLanguage()}>
+            Switch language
+          </button>
           <Text style={styles.instructions}>
             <ReactTranslated.Translate
               text='Simple *translations* in React <ReactLogo>'
@@ -39,6 +67,7 @@ class App extends Component {
               }}
               />
           </Text>
+          <PreventingUpdates />
           <Text style={styles.instructions}>
             <ReactTranslated.Translate text='Hi World!' />
           </Text>

@@ -44,10 +44,7 @@ export default {
       return tag `This is a ${'fruit'}`
     },
     fr({ fruit }) {
-      if (/^[aeiou]/.test(fruit)) {
-        return tag `This is an ${'fruit'}`
-      }
-      return tag `This is a ${'fruit'}`
+      return 'TBD'
     },
   },
 

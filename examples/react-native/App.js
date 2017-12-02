@@ -6,6 +6,7 @@
 
 import React, { Component } from 'react';
 import {
+  Button,
   Image,
   StyleSheet,
   Text,
@@ -29,11 +30,41 @@ const ReactLogo = ({ size }: { size: number }) => (
     />
 )
 
-export default class App extends Component<{}> {
+class PreventingUpdates extends Component {
   render() {
     return (
-      <ReactTranslated.Provider language='en' translation={translation}>
+      <Text style={styles.instructions}>
+        <ReactTranslated.Translate text='Hi World!' />
+      </Text>
+    )
+  }
+  shouldComponentUpdate(nextProps, nextState) {
+    return false;
+  }
+}
+
+export default class App extends Component<{}> {
+  state = {
+    language: 'en'
+  }
+  onPressSwitchLanguage() {
+    const language = {
+      en: 'fr',
+      fr: 'en',
+    }[this.state.language]
+    this.setState({ language })
+  }
+  render() {
+    const { language } = this.state
+    return (
+      <ReactTranslated.Provider language={language} translation={translation}>
         <View style={styles.container}>
+          <Text style={styles.instructions}>Language: {language}</Text>
+          <Button
+            onPress={() => this.onPressSwitchLanguage()}
+            title='Switch language'
+            />
+          <PreventingUpdates />
           <Text style={styles.instructions}>
             <ReactTranslated.Translate
               text='Simple *translations* in React <ReactLogo>'
