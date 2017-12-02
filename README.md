@@ -232,7 +232,7 @@ The translated text can also have some basic styling applied:
 // translation.js
 export default {
   'Hi, *World*!': {
-    en: 'Hi, *World!',
+    en: 'Hi, *World*!',
     fr: 'Bonjour *le monde*!',
   },
 }
