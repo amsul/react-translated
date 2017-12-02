@@ -14,7 +14,7 @@ export default {
       file: 'dist/react-translated.umd.js',
       format: 'umd',
       exports: 'named',
-      name: 'react-translated',
+      name: 'ReactTranslated',
       globals: {
         'prop-types': 'PropTypes',
         'react': 'React',
