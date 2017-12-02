@@ -32,9 +32,13 @@ To render this:
 
 React DOM and React Native 🔥
 
+#### Try
+
+Play around with the library in your browser through the [CodeSandbox](https://codesandbox.io/s/jzq7zwj5k3).
+
 <br />
 
-## Install
+## Installation
 
 Whatever floats your boat:
 
@@ -43,7 +47,7 @@ Whatever floats your boat:
 
 <br />
 
-## Set up
+## Setup
 
 #### Step 1: Create the translations file
 
@@ -92,7 +96,7 @@ Continue reading below to see how to handle the various translation scenarios.
 
 <br />
 
-## Use
+## Usage
 
 The library can be imported in whatever way you find suitable:
 
