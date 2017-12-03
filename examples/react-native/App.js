@@ -13,8 +13,7 @@ import {
   View
 } from 'react-native';
 
-import ReactTranslated from './dist/react-translated'
-import translation from './translation'
+import ExampleApp from './ExampleApp'
 
 const StarIcon = ({ size }: { size: number }) => (
   <Image
@@ -30,120 +29,19 @@ const ReactLogo = ({ size }: { size: number }) => (
     />
 )
 
-class PreventingUpdates extends Component {
-  render() {
-    return (
-      <Text style={styles.instructions}>
-        <ReactTranslated.Translate text='Hi World!' />
-      </Text>
-    )
-  }
-  shouldComponentUpdate(nextProps, nextState) {
-    return false;
-  }
-}
-
 export default class App extends Component<{}> {
-  state = {
-    language: 'en'
-  }
-  onPressSwitchLanguage() {
-    const language = {
-      en: 'fr',
-      fr: 'en',
-    }[this.state.language]
-    this.setState({ language })
-  }
   render() {
-    const { language } = this.state
     return (
-      <ReactTranslated.Provider
-        isDebugging={true}
-        language={language}
-        translation={translation}
-        >
-        <View style={styles.container}>
-          <Text style={styles.instructions}>Language: {language}</Text>
-          <Button
-            onPress={() => this.onPressSwitchLanguage()}
-            title='Switch language'
-            />
-          <Text style={styles.instructions}>
-            Untranslated&hellip;&nbsp;
-            <ReactTranslated.Translate
-              data={{ firstName: 'Pete' }}
-              text='Whoa *{firstName}*!'
-              />
-          </Text>
-          <Text style={styles.instructions}>
-            <ReactTranslated.Translate
-              text='Simple *translations* in React <ReactLogo>'
-              renderMap={{
-                renderReactLogo: () => <ReactLogo size={14} />,
-              }}
-              />
-          </Text>
-          <PreventingUpdates />
-          <Text style={styles.instructions}>
-            <ReactTranslated.Translate text='Hi World!' />
-          </Text>
-          <Text style={styles.instructions}>
-            <ReactTranslated.Translate
-              text='Hi {firstName}!'
-              data={{ firstName: 'Sergey' }}
-              />
-          </Text>
-          <Text style={styles.instructions}>
-            <ReactTranslated.Translate
-              text='There are {catsCount} cats in this room.'
-              data={{ catsCount: 2 }}
-              />
-            {'\n'}
-            <ReactTranslated.Translate
-              text='There are {catsCount} cats in this room.'
-              data={{ catsCount: 1 }}
-              />
-          </Text>
-          <Text style={styles.instructions}>
-            <ReactTranslated.Translate
-              text='This is a {fruit}'
-              data={{ fruit: 'banana' }}
-              />
-            {'\n'}
-            <ReactTranslated.Translate
-              text='This is a {fruit}'
-              data={{ fruit: 'apple' }}
-              />
-          </Text>
-          <Text style={styles.instructions}>
-            <ReactTranslated.Translate
-              text='Hi *World*!'
-              />
-            {'\n'}
-            <ReactTranslated.Translate
-              text='Hi *{firstName}*!'
-              data={{ firstName: 'Sergey' }}
-              />
-          </Text>
-          <Text style={styles.instructions}>
-            <ReactTranslated.Translate
-              text='Tap the <StarIcon> to add'
-              renderMap={{
-                renderStarIcon: () => <StarIcon size={14} />,
-              }}
-              />
-          </Text>
-          <Text style={styles.instructions}>
-            <ReactTranslated.Translate
-              text='I was born in <MonthName>'
-              renderMap={{
-                renderMonthName: () => <ReactTranslated.Translate text='August' />
-              }}
-              />
-          </Text>
-        </View>
-      </ReactTranslated.Provider>
-    );
+      <ExampleApp
+        Br={() => <Text>{'\n'}</Text>}
+        Button={Button}
+        StarIcon={StarIcon}
+        ReactLogo={ReactLogo}
+        Text={Text}
+        View={View}
+        styles={styles}
+        />
+    )
   }
 }
 
