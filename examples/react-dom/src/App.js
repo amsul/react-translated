@@ -48,7 +48,11 @@ class App extends Component {
   render() {
     const { language } = this.state
     return (
-      <ReactTranslated.Provider language={language} translation={translation}>
+      <ReactTranslated.Provider
+        isDebugging={true}
+        language={language}
+        translation={translation}
+        >
         <div className="App">
           <header className="App-header">
             <img src={logo} className="App-logo" alt="logo" />
@@ -59,6 +63,13 @@ class App extends Component {
           <button onClick={() => this.onClickSwitchLanguage()}>
             Switch language
           </button>
+          <Text style={styles.instructions}>
+            Untranslated&hellip;&nbsp;
+            <ReactTranslated.Translate
+              data={{ firstName: 'Pete' }}
+              text='Whoa *{firstName}*!'
+              />
+          </Text>
           <Text style={styles.instructions}>
             <ReactTranslated.Translate
               text='Simple *translations* in React <ReactLogo>'

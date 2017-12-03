@@ -57,14 +57,24 @@ export default class App extends Component<{}> {
   render() {
     const { language } = this.state
     return (
-      <ReactTranslated.Provider language={language} translation={translation}>
+      <ReactTranslated.Provider
+        isDebugging={true}
+        language={language}
+        translation={translation}
+        >
         <View style={styles.container}>
           <Text style={styles.instructions}>Language: {language}</Text>
           <Button
             onPress={() => this.onPressSwitchLanguage()}
             title='Switch language'
             />
-          <PreventingUpdates />
+          <Text style={styles.instructions}>
+            Untranslated&hellip;&nbsp;
+            <ReactTranslated.Translate
+              data={{ firstName: 'Pete' }}
+              text='Whoa *{firstName}*!'
+              />
+          </Text>
           <Text style={styles.instructions}>
             <ReactTranslated.Translate
               text='Simple *translations* in React <ReactLogo>'
@@ -73,6 +83,7 @@ export default class App extends Component<{}> {
               }}
               />
           </Text>
+          <PreventingUpdates />
           <Text style={styles.instructions}>
             <ReactTranslated.Translate text='Hi World!' />
           </Text>
