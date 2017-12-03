@@ -4445,10 +4445,6 @@ temp@0.8.3:
     os-tmpdir "^1.0.0"
     rimraf "~2.2.6"
 
-template-literals@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/template-literals/-/template-literals-1.0.0.tgz#311d3ec9a47b6818b6923d7fa6744bdb870c2543"
-
 test-exclude@^4.1.1:
   version "4.1.1"
   resolved "https://registry.yarnpkg.com/test-exclude/-/test-exclude-4.1.1.tgz#4d84964b0966b0087ecc334a2ce002d3d9341e26"

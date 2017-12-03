@@ -33,8 +33,7 @@
   "dependencies": {
     "prop-types": "^15.6.0",
     "react": "^16.0.0",
-    "react-native": "^0.50.0",
-    "template-literals": "^1.0.0"
+    "react-native": "^0.50.0"
   },
   "devDependencies": {
     "babel-eslint": "^8.0.2",
