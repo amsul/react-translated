@@ -13,7 +13,7 @@
     "build:examples:native": "cp -a dist/. examples/react-native/dist/",
     "build:examples:dom": "cp -a dist/. examples/react-dom/src/dist/",
     "develop": "watch 'yarn build' lib/.",
-    "release": "yarn build && yarn publish"
+    "prepublish": "yarn build"
   },
   "files": [
     "dist/**"
@@ -31,6 +31,7 @@
     "i18n"
   ],
   "dependencies": {
+    "basic-parser": "^1.0.2",
     "prop-types": "^15.6.0",
     "react": "^16.0.0",
     "react-native": "^0.50.0"
