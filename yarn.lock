@@ -1164,6 +1164,10 @@ basic-auth@~1.0.3:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/basic-auth/-/basic-auth-1.0.4.tgz#030935b01de7c9b94a824b29f3fccb750d3a5290"
 
+basic-parser@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/basic-parser/-/basic-parser-1.0.2.tgz#f0594f2ea26b1f71d7162dba97cdf69a9e7b99da"
+
 batch@0.5.3:
   version "0.5.3"
   resolved "https://registry.yarnpkg.com/batch/-/batch-0.5.3.tgz#3f3414f380321743bfc1042f9a83ff1d5824d464"
@@ -2067,6 +2071,10 @@ flat-cache@^1.2.1:
     del "^2.0.2"
     graceful-fs "^4.1.2"
     write "^0.2.1"
+
+flow-bin@^0.61.0:
+  version "0.61.0"
+  resolved "https://registry.yarnpkg.com/flow-bin/-/flow-bin-0.61.0.tgz#d0473a8c35dbbf4de573823f4932124397d32d35"
 
 flow-remove-types@^1.1.0:
   version "1.2.3"
@@ -4444,10 +4452,6 @@ temp@0.8.3:
   dependencies:
     os-tmpdir "^1.0.0"
     rimraf "~2.2.6"
-
-template-literals@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/template-literals/-/template-literals-1.0.0.tgz#311d3ec9a47b6818b6923d7fa6744bdb870c2543"
 
 test-exclude@^4.1.1:
   version "4.1.1"

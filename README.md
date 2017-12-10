@@ -110,7 +110,7 @@ import * as ReactTranslated from 'react-translated'
 Or:
 
 ```js
-import { tag, Provider, Translate } from 'react-translated'
+import { Provider, Translate } from 'react-translated'
 
 <Translate /*...*/ />
 ```
@@ -143,11 +143,10 @@ To use dynamic text, the text can be templated:
 
 ```jsx
 // translation.js
-import { tag } from 'react-translated'
 export default {
   'Hi, {firstName}!': {
-    en: tag `Hi, ${'firstName'}!`,
-    fr: tag `Salut ${'firstName'}!`,
+    en: 'Hi, {firstName}!',
+    fr: 'Salut {firstName}!',
   },
 }
 
@@ -168,14 +167,13 @@ Sometimes just dynamic text is not enough and the template itself needs to be dy
 
 ```jsx
 // translation.js
-import { tag } from 'react-translated'
 export default {
   'There are {catsCount} cats in this room.': {
     en({ catsCount }) {
       if (catsCount === 1) {
-        return tag `There is ${'catsCount'} cat in this room.`
+        return 'There is {catsCount} cat in this room.'
       }
-      return tag `There are ${'catsCount'} cats in this room.`
+      return 'There are {catsCount} cats in this room.'
     },
     // ...
   },
@@ -200,14 +198,13 @@ Since these templates are simple function calls, things more complex than plural
 
 ```jsx
 // translation.js
-import { tag } from 'react-translated'
 export default {
   'This is a {fruit}': {
     en({ fruit }) {
       if (/^[aeiou]/.test(fruit)) {
-        return tag `This is an ${'fruit'}`
+        return 'This is an {fruit}'
       }
-      return tag `This is a ${'fruit'}`
+      return 'This is a {fruit}'
     },
     // ...
   },
@@ -253,11 +250,10 @@ And of course the same can be done with dynamic templates:
 
 ```jsx
 // translation.js
-import { tag } from 'react-translated'
 export default {
   'Hi, *{firstName}*!': {
-    en: tag `Hi, *${'firstName'}*!`,
-    fr: tag `Salut *${'firstName'}*!`,
+    en: 'Hi, *{firstName}*!',
+    fr: 'Salut *{firstName}*!',
   },
 }
 

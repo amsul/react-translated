@@ -1,6 +1,6 @@
 {
   "name": "react-translated",
-  "version": "1.2.3",
+  "version": "2.0.0",
   "description": "A dead simple way to add complex translations in a React project 🌎",
   "repository": "https://github.com/amsul/react-translated",
   "author": "Amsul <reach@amsul.ca>",
@@ -13,7 +13,7 @@
     "build:examples:native": "cp -a dist/. examples/react-native/dist/",
     "build:examples:dom": "cp -a dist/. examples/react-dom/src/dist/",
     "develop": "watch 'yarn build' lib/.",
-    "release": "yarn build && yarn publish"
+    "prepublish": "yarn build"
   },
   "files": [
     "dist/**"
@@ -31,10 +31,10 @@
     "i18n"
   ],
   "dependencies": {
+    "basic-parser": "^1.0.2",
     "prop-types": "^15.6.0",
     "react": "^16.0.0",
-    "react-native": "^0.50.0",
-    "template-literals": "^1.0.0"
+    "react-native": "^0.50.0"
   },
   "devDependencies": {
     "babel-eslint": "^8.0.2",
@@ -47,6 +47,7 @@
     "eslint": "^4.12.1",
     "eslint-plugin-flowtype": "^2.39.1",
     "eslint-plugin-react": "^7.5.1",
+    "flow-bin": "^0.61.0",
     "flow-typed": "^2.2.3",
     "rollup": "^0.52.0",
     "rollup-plugin-babel": "^3.0.2",

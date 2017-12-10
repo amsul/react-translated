@@ -1,11 +1,9 @@
-import { tag } from 'template-literals'
-
 export default {
 
   // Full example
   'Simple *translations* in React <ReactLogo>': {
     en: 'Simple *translations* in React <ReactLogo>',
-    fr: 'Des traductions simples dans React <ReactLogo>',
+    fr: 'Des *traductions* simples dans React <ReactLogo>',
   },
 
 
@@ -17,31 +15,31 @@ export default {
 
   // Templated text
   'Hi {firstName}!': {
-    en: tag `Hi ${'firstName'}!`,
-    fr: tag `Salut ${'firstName'}!`,
+    en: 'Hi {firstName}!',
+    fr: 'Salut {firstName}!',
   },
 
   // Dynamically templated text
   'There are {catsCount} cats in this room.': {
     en({ catsCount }) {
       if (catsCount === 1) {
-        return tag `There is ${'catsCount'} cat in this room.`
+        return 'There is {catsCount} cat in this room.'
       }
-      return tag `There are ${'catsCount'} cats in this room.`
+      return 'There are {catsCount} cats in this room.'
     },
     fr({ catsCount }) {
       if (catsCount === 1) {
-        return tag `Il y a ${'catsCount'} chat dans cette pièce.`
+        return 'Il y a {catsCount} chat dans cette pièce.'
       }
-      return tag `Il y a ${'catsCount'} chats dans cette pièce.`
+      return 'Il y a {catsCount} chats dans cette pièce.'
     },
   },
   'This is a {fruit}': {
     en({ fruit }) {
       if (/^[aeiou]/.test(fruit)) {
-        return tag `This is an ${'fruit'}`
+        return 'This is an {fruit}'
       }
-      return tag `This is a ${'fruit'}`
+      return 'This is a {fruit}'
     },
     fr({ fruit }) {
       return 'TBD'
@@ -54,8 +52,8 @@ export default {
     fr: 'Salut mon *pote*!',
   },
   'Hi *{firstName}*!': {
-    en: tag `Hi *${'firstName'}*!`,
-    fr: tag `Salut *${'firstName'}*!`,
+    en: 'Hi *{firstName}*!',
+    fr: 'Salut *{firstName}*!',
   },
 
   // Component within text
