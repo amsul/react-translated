@@ -12,11 +12,15 @@
     "build:examples": "yarn build:examples:native && yarn build:examples:dom",
     "build:examples:native": "cp -a dist/. examples/react-native/dist/",
     "build:examples:dom": "cp -a dist/. examples/react-dom/src/dist/",
+    "contributors:add": "all-contributors add",
+    "contributors:generate": "all-contributors generate",
     "develop": "watch 'yarn build' lib/.",
-    "prepublish": "yarn build"
+    "prepublish": "yarn build",
+    "test": "echo TODO"
   },
   "files": [
-    "dist/**"
+    "dist/**",
+    "lib/**"
   ],
   "main": "dist/react-translated.umd.js",
   "module": "dist/react-translated.js",
@@ -37,6 +41,7 @@
     "react-native": "^0.50.0"
   },
   "devDependencies": {
+    "all-contributors-cli": "^4.10.0",
     "babel-eslint": "^8.0.2",
     "babel-jest": "^21.2.0",
     "babel-plugin-external-helpers": "^6.22.0",
