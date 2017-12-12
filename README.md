@@ -4,11 +4,11 @@ A dead simple way to add complex translations in a React project 🌎🌍🌏
 
 #### Features
 
-* Data interpolation
-* Component interpolation
-* Markdown inline-manipulations (bold text only right now)
-* Custom manipulations, pluralizations, and grammar rules based on input-data
-* Component-level translation files (enables loading only required translations)
+* 💥 Data interpolation
+* ☄ Component interpolation
+* Ⓜ Markdown inline-manipulations
+* 🔀 Custom manipulations, pluralizations, and grammar rules based on input-data
+* ⚛ Component-level translation files (enables loading only required translations)
 
 #### Example
 
@@ -38,12 +38,23 @@ Play around with the library in your browser through the [CodeSandbox](https://c
 
 <br />
 
+## Table of Contents
+
+* [Installation](#installation)
+* [Setup](#setup)
+* [Usage](#usage)
+* [Contributors](#contributors)
+* [TODOs](#todos)
+* [License](#license)
+
+<br />
+
 ## Installation
 
 Whatever floats your boat:
 
-- [Yarn](https://yarnpkg.com): `yarn add react-translated`
-- [npm](https://www.npmjs.com): `npm install react-translated`
+* [Yarn](https://yarnpkg.com): `yarn add react-translated`
+* [npm](https://www.npmjs.com): `npm install react-translated`
 
 <br />
 
@@ -92,7 +103,6 @@ NOTE: The value of the `language` prop must be one of the keys used for a langua
 That is all!
 
 Continue reading below to see how to handle the various translation scenarios.
-
 
 <br />
 
@@ -325,8 +335,31 @@ Renders as:
 
 <br />
 
----
+## Contributors
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore -->
+| [<img src="https://avatars3.githubusercontent.com/u/685051?v=4" width="100px;"/><br /><sub><b>amsul</b></sub>](http://amsul.ca)<br />[💻](https://github.com/Amsul/react-translated/commits?author=amsul "Code") [🎨](#design-amsul "Design") [📖](https://github.com/Amsul/react-translated/commits?author=amsul "Documentation") [💡](#example-amsul "Examples") [🔧](#tool-amsul "Tools") |
+| :---: |
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+👋 Interested becoming a contributor too?
+
+Awesome! This project follows the [all-contributors](https://github.com/kentcdodds/all-contributors)
+specification. Contributions of any kind are welcome!
+
+You may also want to take a look at our [TODOs](#todos) below and make sure to give our [Contributing](https://github.com/amsul/react-translated/blob/master/CONTRIBUTING.md) guide a read.
+
+<br />
+
+## TODOs
+
+* Add tests using [Jest](https://facebook.github.io/jest/)
+
+<br />
+
+## License
+
+Licensed under [MIT](https://github.com/amsul/react-translated/blob/master/LICENSE).
 
 © 2017 [Amsul](http://twitter.com/amsul_)
-
-Licensed under [MIT](http://amsul.ca/MIT)
