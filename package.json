@@ -26,6 +26,7 @@
   "main": "dist/react-translated.js",
   "module": "dist/react-translated.es.js",
   "jsnext:main": "dist/react-translated.es.js",
+  "react-native": "dist/react-translated.native.js",
   "keywords": [
     "react",
     "react-dom",
