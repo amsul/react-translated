@@ -23,9 +23,9 @@
     "dist/**",
     "lib/**"
   ],
-  "main": "dist/react-translated.umd.js",
-  "module": "dist/react-translated.js",
-  "jsnext:main": "dist/react-translated.js",
+  "main": "dist/react-translated.js",
+  "module": "dist/react-translated.es.js",
+  "jsnext:main": "dist/react-translated.es.js",
   "keywords": [
     "react",
     "react-dom",

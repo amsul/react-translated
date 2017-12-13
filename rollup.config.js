@@ -6,18 +6,18 @@ export default {
   input: 'lib/index.js',
   output: [
     {
-      file: 'dist/react-translated.js',
+      file: 'dist/react-translated.es.js',
       format: 'es',
       exports: 'named',
     },
     {
-      file: 'dist/react-translated.umd.js',
+      file: 'dist/react-translated.js',
       format: 'umd',
       exports: 'named',
       name: 'ReactTranslated',
       globals: {
         'prop-types': 'PropTypes',
-        'react': 'React',
+        react: 'React',
       },
     },
   ],
@@ -25,12 +25,9 @@ export default {
     flow(),
     babel({
       exclude: 'node_modules/**',
-      presets: ['es2015-rollup', 'stage-0', "react"],
+      presets: ['es2015-rollup', 'stage-0', 'react'],
     }),
     nodeResolve(),
   ],
-  external: [
-    'prop-types',
-    'react',
-  ],
+  external: ['prop-types', 'react'],
 }
