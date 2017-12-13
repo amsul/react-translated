@@ -1,6 +1,6 @@
 {
   "name": "react-translated",
-  "version": "2.0.0",
+  "version": "2.0.2",
   "description": "A dead simple way to add complex translations in a React project 🌎",
   "repository": "https://github.com/amsul/react-translated",
   "author": "Amsul <reach@amsul.ca>",
@@ -26,6 +26,7 @@
   "main": "dist/react-translated.js",
   "module": "dist/react-translated.es.js",
   "jsnext:main": "dist/react-translated.es.js",
+  "react-native": "dist/react-translated.native.js",
   "keywords": [
     "react",
     "react-dom",
