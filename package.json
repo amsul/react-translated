@@ -1,6 +1,6 @@
 {
   "name": "react-translated",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "A dead simple way to add complex translations in a React project 🌎",
   "repository": "https://github.com/amsul/react-translated",
   "author": "Amsul <reach@amsul.ca>",
