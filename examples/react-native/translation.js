@@ -1,11 +1,9 @@
 export default {
-
   // Full example
   'Simple *translations* in React <ReactLogo>': {
     en: 'Simple *translations* in React <ReactLogo>',
     fr: 'Des *traductions* simples dans React <ReactLogo>',
   },
-
 
   // Static text
   'Hi World!': {
@@ -17,6 +15,10 @@ export default {
   'Hi {firstName}!': {
     en: 'Hi {firstName}!',
     fr: 'Salut {firstName}!',
+  },
+  'Enter your age {firstName}': {
+    en: 'Enter your age {firstName}',
+    fr: 'entrez votre âge {firstName}',
   },
 
   // Dynamically templated text
@@ -65,9 +67,8 @@ export default {
     en: 'I was born in <MonthName>',
     fr: 'Je suis né en <MonthName>',
   },
-  'August': {
+  August: {
     en: 'August',
     fr: 'août',
   },
-
 }

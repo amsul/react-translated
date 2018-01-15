@@ -354,9 +354,9 @@ In scenarios where just the translated text is required, such as with text input
 ```jsx
 // translation.js
 export default {
-  'Hi, {firstName}!': {
-    en: 'Hi, {firstName}!',
-    fr: 'Salut {firstName}!',
+  'Enter your age {firstName}': {
+    en: 'Enter your age {firstName}',
+    fr: 'entrez votre âge {firstName}',
   },
 }
 
