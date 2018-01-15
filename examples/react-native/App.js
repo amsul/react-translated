@@ -4,14 +4,8 @@
  * @flow
  */
 
-import React, { Component } from 'react';
-import {
-  Button,
-  Image,
-  StyleSheet,
-  Text,
-  View
-} from 'react-native';
+import React, { Component } from 'react'
+import { Button, Image, StyleSheet, Text, TextInput, View } from 'react-native'
 
 import ExampleApp from './ExampleApp'
 
@@ -19,14 +13,14 @@ const StarIcon = ({ size }: { size: number }) => (
   <Image
     style={{ width: size, height: size }}
     source={{ uri: 'https://i.imgur.com/0baclSU.png' }}
-    />
+  />
 )
 
 const ReactLogo = ({ size }: { size: number }) => (
   <Image
     style={{ width: size, height: size }}
     source={{ uri: 'https://i.imgur.com/nakYmC1.png' }}
-    />
+  />
 )
 
 export default class App extends Component<{}> {
@@ -35,12 +29,25 @@ export default class App extends Component<{}> {
       <ExampleApp
         Br={() => <Text>{'\n'}</Text>}
         Button={Button}
+        Input={props => (
+          <TextInput
+            {...props}
+            style={{
+              backgroundColor: 'white',
+              borderColor: '#eee',
+              borderWidth: 1,
+              borderRadius: 3,
+              paddingVertical: 4,
+              paddingHorizontal: 6,
+            }}
+          />
+        )}
         StarIcon={StarIcon}
         ReactLogo={ReactLogo}
         Text={Text}
         View={View}
         styles={styles}
-        />
+      />
     )
   }
 }
@@ -60,4 +67,7 @@ const styles = StyleSheet.create({
     color: '#333333',
     margin: 5,
   },
-});
+  instructions_view: {
+    margin: 5,
+  },
+})

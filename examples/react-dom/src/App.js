@@ -1,42 +1,47 @@
-import React, { Component } from 'react';
-import './App.css';
+import React, { Component } from 'react'
+import './App.css'
 
 import ExampleApp from './ExampleApp'
 
 const StarIcon = ({ size }: { size: number }) => (
   <img
     style={{ width: size, height: size }}
-    src='https://i.imgur.com/0baclSU.png'
-    />
+    src="https://i.imgur.com/0baclSU.png"
+  />
 )
 
 const ReactLogo = ({ size }: { size: number }) => (
   <img
     style={{ width: size, height: size }}
-    src='https://i.imgur.com/nakYmC1.png'
-    />
+    src="https://i.imgur.com/nakYmC1.png"
+  />
 )
 
 export default class App extends Component<{}> {
   render() {
     return (
       <ExampleApp
-        Br='br'
+        Br="br"
         Button={({ title, onPress, ...props }) => (
-          <button onClick={onPress} {...props}>{title}</button>
+          <button onClick={onPress} {...props}>
+            {title}
+          </button>
         )}
+        Input="input"
         StarIcon={StarIcon}
         ReactLogo={ReactLogo}
-        Text='p'
-        View='div'
+        Text="p"
+        View="div"
         styles={styles}
-        />
+      />
     )
   }
 }
 
 const styles = {
   container: {
+    display: 'flex',
+    flexDirection: 'column',
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',

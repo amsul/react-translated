@@ -16,12 +16,12 @@ Write this:
 
 ```jsx
 <Translate
-  text='{difficulty} *translations* in React <ReactLogo>'
+  text="{difficulty} *translations* in React <ReactLogo>"
   data={{ difficulty: 'Simple' }}
   renderMap={{
     renderReactLogo: () => <ReactLogo size={14} />,
   }}
-  />
+/>
 ```
 
 To render this:
@@ -90,7 +90,7 @@ Wrap your top-level component with the `<Provider>` and set the `translation` an
 import { Provider } from 'react-translated'
 import translation from './translation'
 const App = (
-  <Provider language='en' translation={translation}>
+  <Provider language="en" translation={translation}>
     <MyApplicationRoot />
   </Provider>
 )
@@ -125,6 +125,17 @@ import { Provider, Translate } from 'react-translated'
 <Translate /*...*/ />
 ```
 
+#### Translation techniques
+
+* [Static text](#static-text)
+* [Templated text](#templated-text)
+* [Dynamically templated text](#dynamically-templated-text)
+* [Styled text](#styled-text)
+* [Component within text](#component-within-text)
+* [Custom rendered text](#custom-rendered-text)
+
+<br />
+
 ### Static text
 
 This is pretty self-explanatory:
@@ -145,7 +156,6 @@ export default {
 Renders as:
 
 ![](docs/hi_world.png)
-
 
 ### Templated text
 
@@ -335,12 +345,43 @@ Renders as:
 
 <br />
 
+### Custom rendered text
+
+In scenarios where just the translated text is required, such as with text inputs, a custom render method can be used:
+
+```jsx
+// translation.js
+export default {
+  'Hi, {firstName}!': {
+    en: 'Hi, {firstName}!',
+    fr: 'Salut {firstName}!',
+  },
+}
+
+// any component file
+<Translate
+  text='Enter your age {firstName}'
+  data={{ firstName: 'Sergey' }}
+  render={({ translatedText }) => (
+    <input placeholder={translatedText} />
+  )}
+  />
+```
+
+Renders as:
+
+![](docs/age_sergey.png)
+
+<br />
+
 ## Contributors
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+
 <!-- prettier-ignore -->
 | [<img src="https://avatars3.githubusercontent.com/u/685051?v=4" width="100px;"/><br /><sub><b>amsul</b></sub>](http://amsul.ca)<br />[💻](https://github.com/Amsul/react-translated/commits?author=amsul "Code") [🎨](#design-amsul "Design") [📖](https://github.com/Amsul/react-translated/commits?author=amsul "Documentation") [💡](#example-amsul "Examples") [🔧](#tool-amsul "Tools") |
 | :---: |
+
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 👋 Interested becoming a contributor too?
