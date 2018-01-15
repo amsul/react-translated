@@ -12,7 +12,7 @@ export default {
     },
     {
       file: 'dist/react-translated.js',
-      format: 'umd',
+      format: 'cjs',
       exports: 'named',
       name: 'ReactTranslated',
       globals: {
