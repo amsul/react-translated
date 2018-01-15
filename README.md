@@ -345,7 +345,9 @@ Renders as:
 
 <br />
 
-### Custom rendered text (v2.1.0+)
+### Custom rendered text
+
+> _Added v2.1.0_
 
 In scenarios where just the translated text is required, such as with text inputs, a custom render method can be used:
 
