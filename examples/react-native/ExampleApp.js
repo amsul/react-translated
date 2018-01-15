@@ -135,13 +135,15 @@ export default class ExampleApp extends React.Component {
               }}
             />
           </Text>
-          <ReactTranslated.Translate
-            text="Enter your age {firstName}"
-            data={{ firstName: 'Sergey' }}
-            render={({ translatedText }) => (
-              <Input placeholder={translatedText} />
-            )}
-          />
+          <View style={styles.instructions_view}>
+            <ReactTranslated.Translate
+              text="Enter your age {firstName}"
+              data={{ firstName: 'Sergey' }}
+              render={({ translatedText }) => (
+                <Input placeholder={translatedText} />
+              )}
+            />
+          </View>
         </View>
       </ReactTranslated.Provider>
     )

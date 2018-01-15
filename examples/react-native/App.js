@@ -29,7 +29,19 @@ export default class App extends Component<{}> {
       <ExampleApp
         Br={() => <Text>{'\n'}</Text>}
         Button={Button}
-        Input={TextInput}
+        Input={props => (
+          <TextInput
+            {...props}
+            style={{
+              backgroundColor: 'white',
+              borderColor: '#eee',
+              borderWidth: 1,
+              borderRadius: 3,
+              paddingVertical: 4,
+              paddingHorizontal: 6,
+            }}
+          />
+        )}
         StarIcon={StarIcon}
         ReactLogo={ReactLogo}
         Text={Text}
@@ -53,6 +65,9 @@ const styles = StyleSheet.create({
     lineHeight: 24,
     textAlign: 'center',
     color: '#333333',
+    margin: 5,
+  },
+  instructions_view: {
     margin: 5,
   },
 })
