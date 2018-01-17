@@ -78,7 +78,7 @@ export default {
 }
 ```
 
-NOTE: There is no enforcement on the key used for a language. In these examples, [2-digit country codes](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#Officially_assigned_code_elements) (`en`, `fr`, etc) are used. Decide on a convention and use that for all translations.
+> NOTE: There is no enforcement on the key used for a language. In these examples, [2-digit country codes](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#Officially_assigned_code_elements) (`en`, `fr`, etc) are used. Decide on a convention and use that for all translations.
 
 #### Step 2: Connect the `Provider`
 
@@ -96,7 +96,7 @@ const App = (
 )
 ```
 
-NOTE: The value of the `language` prop must be one of the keys used for a language defined in Step 1.
+> NOTE: The value of the `language` prop must be one of the keys used for a language defined in Step 1.
 
 #### Step 3: Start translating
 
@@ -120,19 +120,25 @@ import * as ReactTranslated from 'react-translated'
 Or:
 
 ```js
-import { Provider, Translate } from 'react-translated'
+import { Provider, Translate, Translator } from 'react-translated'
 
 <Translate /*...*/ />
 ```
 
-#### Translation techniques
+#### `Translate` vs `Translator`
+
+The `Translate` component should **always** be used when the translation is rendered as a child component; such as buttons, paragraphs, headings, etc.
+
+The `Translator` component should **only** be used when the translation is needed as a string; such as placeholders, alternate text, etc.
+
+#### Translation scenarios
 
 * [Static text](#static-text)
 * [Templated text](#templated-text)
 * [Dynamically templated text](#dynamically-templated-text)
 * [Styled text](#styled-text)
 * [Component within text](#component-within-text)
-* [Custom rendered text](#custom-rendered-text)
+* [Translated text as string](#translated-text-as-string) (for text input placeholders)
 
 <br />
 
@@ -345,11 +351,11 @@ Renders as:
 
 <br />
 
-### Custom rendered text
+### Translated text as string
 
-> _Added v2.1.0_
+> _Added v2.2.0_
 
-In scenarios where just the translated text is required, such as with text inputs, a custom render method can be used:
+In scenarios where the translated text is required as a string, such as with text inputs placeholders or accessibility labels, the `Translator` can be used:
 
 ```jsx
 // translation.js
@@ -361,13 +367,16 @@ export default {
 }
 
 // any component file
-<Translate
-  text='Enter your age {firstName}'
-  data={{ firstName: 'Sergey' }}
-  render={({ translatedText }) => (
-    <input placeholder={translatedText} />
+<Translator>
+  {({ translate }) => (
+    <input
+      placeholder={translate({
+        text: 'Enter your age {firstName}',
+        data: { firstName: 'Sergey' },
+      })}
+      />
   )}
-  />
+</Translator>
 ```
 
 Renders as:
