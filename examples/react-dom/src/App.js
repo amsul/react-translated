@@ -27,7 +27,11 @@ export default class App extends Component<{}> {
             {title}
           </button>
         )}
-        Input="input"
+        Input={props => (
+          <div>
+            <input {...props} />
+          </div>
+        )}
         StarIcon={StarIcon}
         ReactLogo={ReactLogo}
         Text="p"

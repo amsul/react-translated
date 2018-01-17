@@ -135,15 +135,19 @@ export default class ExampleApp extends React.Component {
               }}
             />
           </Text>
-          <View style={styles.instructions_view}>
-            <ReactTranslated.Translate
-              text="Enter your age {firstName}"
-              data={{ firstName: 'Sergey' }}
-              render={({ translatedText }) => (
-                <Input placeholder={translatedText} />
-              )}
-            />
-          </View>
+          <ReactTranslated.Translator>
+            {({ translate }) => (
+              <View>
+                <Input
+                  placeholder={translate({
+                    text: 'Enter your age {firstName}',
+                    data: { firstName: 'Sergey' },
+                  })}
+                />
+                <Input placeholder={translate({ text: 'Hi World!' })} />
+              </View>
+            )}
+          </ReactTranslated.Translator>
         </View>
       </ReactTranslated.Provider>
     )
