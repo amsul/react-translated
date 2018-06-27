@@ -38,9 +38,7 @@
   ],
   "dependencies": {
     "basic-parser": "^1.0.2",
-    "prop-types": "^15.6.0",
-    "react": "^16.0.0",
-    "react-native": "^0.50.0"
+    "prop-types": "^15.6.0"
   },
   "devDependencies": {
     "all-contributors-cli": "^4.10.0",
