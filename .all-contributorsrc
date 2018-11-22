@@ -19,6 +19,16 @@
         "example",
         "tool"
       ]
+    },
+    {
+      "login": "johnsonsu",
+      "name": "Johnson Su",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/4886073?v=4",
+      "profile": "https://johnsonsu.com",
+      "contributions": [
+        "bug",
+        "code"
+      ]
     }
   ]
 }

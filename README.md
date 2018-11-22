@@ -388,11 +388,9 @@ Renders as:
 ## Contributors
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-
 <!-- prettier-ignore -->
-| [<img src="https://avatars3.githubusercontent.com/u/685051?v=4" width="100px;"/><br /><sub><b>amsul</b></sub>](http://amsul.ca)<br />[💻](https://github.com/Amsul/react-translated/commits?author=amsul "Code") [🎨](#design-amsul "Design") [📖](https://github.com/Amsul/react-translated/commits?author=amsul "Documentation") [💡](#example-amsul "Examples") [🔧](#tool-amsul "Tools") |
-| :---: |
-
+| [<img src="https://avatars3.githubusercontent.com/u/685051?v=4" width="100px;"/><br /><sub><b>amsul</b></sub>](http://amsul.ca)<br />[💻](https://github.com/Amsul/react-translated/commits?author=amsul "Code") [🎨](#design-amsul "Design") [📖](https://github.com/Amsul/react-translated/commits?author=amsul "Documentation") [💡](#example-amsul "Examples") [🔧](#tool-amsul "Tools") | [<img src="https://avatars2.githubusercontent.com/u/4886073?v=4" width="100px;"/><br /><sub><b>Johnson Su</b></sub>](https://johnsonsu.com)<br />[🐛](https://github.com/Amsul/react-translated/issues?q=author%3Ajohnsonsu "Bug reports") [💻](https://github.com/Amsul/react-translated/commits?author=johnsonsu "Code") |
+| :---: | :---: |
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 👋 Interested becoming a contributor too?
