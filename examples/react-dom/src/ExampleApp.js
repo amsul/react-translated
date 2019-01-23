@@ -34,12 +34,20 @@ export default class ExampleApp extends React.Component {
       Button,
       Input,
       Text,
+      InlineText,
       StarIcon,
       ReactLogo,
       View,
       styles,
     } = this.props
     const { language } = this.state
+
+    const PurpleText = ({ key, children }) => (
+      <InlineText key={key} style={{ color: 'pink' }}>
+        {children}
+      </InlineText>
+    )
+
     return (
       <ReactTranslated.Provider
         // isDebugging={true}
@@ -148,6 +156,18 @@ export default class ExampleApp extends React.Component {
               </View>
             )}
           </ReactTranslated.Translator>
+          <Text style={styles.instructions}>
+            Custom inline renderer&hellip;&nbsp;
+            <ReactTranslated.Translate
+              text="To ^custom emphasize^ some words."
+              renderers={[
+                {
+                  match: '\\^',
+                  render: PurpleText,
+                },
+              ]}
+            />
+          </Text>
         </View>
       </ReactTranslated.Provider>
     )

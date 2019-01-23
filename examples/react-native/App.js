@@ -45,6 +45,7 @@ export default class App extends Component<{}> {
         StarIcon={StarIcon}
         ReactLogo={ReactLogo}
         Text={Text}
+        InlineText={Text}
         View={View}
         styles={styles}
       />

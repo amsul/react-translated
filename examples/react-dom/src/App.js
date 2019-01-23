@@ -35,6 +35,7 @@ export default class App extends Component<{}> {
         StarIcon={StarIcon}
         ReactLogo={ReactLogo}
         Text="p"
+        InlineText="span"
         View="div"
         styles={styles}
       />
