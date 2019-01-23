@@ -63,7 +63,10 @@
     "watch": "^1.0.2"
   },
   "peerDependencies": {
-    "react": ">=16.0.0",
+    "react": ">=16.0.0"
+  },
+  "optionalPeerDependencies": {
+    "react-dom": ">=16.0.0",
     "react-native": ">=0.50.0"
   }
 }
