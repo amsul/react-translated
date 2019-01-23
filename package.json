@@ -37,7 +37,7 @@
     "i18n"
   ],
   "dependencies": {
-    "basic-parser": "^1.0.2",
+    "basic-parser": "^1.0.3",
     "prop-types": "^15.6.0"
   },
   "devDependencies": {
