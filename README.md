@@ -412,4 +412,4 @@ You may also want to take a look at our [TODOs](#todos) below and make sure to g
 
 Licensed under [MIT](https://github.com/amsul/react-translated/blob/master/LICENSE).
 
-© 2017 [Amsul](http://twitter.com/amsul_)
+© 2019 [Amsul](http://twitter.com/amsul_)
