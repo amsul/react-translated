@@ -1137,10 +1137,10 @@ balanced-match@^1.0.0:
   resolved "https://registry.yarnpkg.com/balanced-match/-/balanced-match-1.0.0.tgz#89b4d199ab2bee49de164ea02b89ce462d71b767"
   integrity sha1-ibTRmasr7kneFk6gK4nORi1xt2c=
 
-basic-parser@^1.0.3:
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/basic-parser/-/basic-parser-1.0.3.tgz#be95a240939ab008a9c349a01d21eb20386d4239"
-  integrity sha512-tmsk2YwGqrQ/swyn5E1SXnRshHavJPMbrVI4QOEJUM+Y6Tl0re89oq1SCcUig24cj4YirI/8TAlEMZhVSJWIOw==
+basic-parser@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/basic-parser/-/basic-parser-1.1.0.tgz#4225866303ba5a9ec5eb360d378a7d46f41910f5"
+  integrity sha512-KABkST6SL7NCZH9Yi5ZsJrki6388ZkXzpbN7j2lIWvptNagagkXID4F8GF7XGju8bTyXQfMzoTXgoiKMggiQjA==
 
 bcrypt-pbkdf@^1.0.0:
   version "1.0.1"
